@@ -1,6 +1,7 @@
 @extends('master')
 
 <?php
+
 $pageTitle = $authorName;
 ?>
 
@@ -13,29 +14,10 @@ $pageTitle = $authorName;
         {{  HTML::link('article/'.$article['id'], $article['title']) }}
     </div>
 
-    <div class="articleSyn">{{ blah($article['body']) }}</div>
+    <div class="articleSyn">{{ Util::compacter($article['body']) }}</div>
 </div>
 
 @endforeach
 
 
 @stop
-
-<?php
-
-function blah($str){
-
-    $x = 200;
-    if(substr($str, $x, 1) === " "){
-        return substr($str, 0, $x)." ...";
-    }else{
-        while(substr($str, $x, 1) !== " "){
-            $x--;
-        }
-        return substr($str, 0, $x)." ...";
-    }
-
-
-}
-
-?>

@@ -19,7 +19,7 @@ class AuthorController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+        echo "Create Author";
 	}
 
 	/**

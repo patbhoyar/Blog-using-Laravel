@@ -16,7 +16,7 @@ $pageTitle  =   'All Articles';
         </span>
     </div>
 
-    <div class="articleSyn">{{ $article['body'] }}</div>
+    <div class="articleSyn">{{ Util::compacter($article['body']) }}</div>
 </div>
 
 @endforeach

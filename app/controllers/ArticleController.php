@@ -32,7 +32,7 @@ class ArticleController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('articles.create', array('authors' => DB::table('authors')->select('id', 'name')->get()));
 	}
 
 	/**
@@ -42,7 +42,12 @@ class ArticleController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        $article = new Article();
+        $article->title = Input::get('newArticleTitleText');
+        $article->body  = nl2br(Input::get('newArticleBodyText'));
+        $article->author_id = Input::get('newSelectAuthor');
+		$article->save();
+        return Redirect::to('article/'.$article->id);
 	}
 
 	/**
