@@ -1,0 +1,80 @@
+html, body, ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background: #f7f5ee;
+}
+
+#mainContainer{
+    width: 1000px;
+    min-height: 1000px;
+    margin: auto;
+    background: white;
+    border-left: 1px solid #E0D5AD;
+    border-right: 1px solid #E0D5AD;
+}
+
+#menuContainer{
+    padding: 20px;
+}
+
+#menu li{
+    float: left;
+    margin-left: 10px;
+    border-left: 1px solid #404040;
+    padding-left: 10px;
+}
+
+#menu li:first-child{
+    border: none;
+}
+
+#header{
+    font-size: 33px;
+    font-weight: bold;
+    padding: 20px 0px 10px 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.articleContainer{
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.articleTitle{
+    font-weight: bold;
+    font-size: 27px;
+    font-style: italic;
+}
+
+.articleAuthor{
+    font-size: 19px;
+    font-style: normal;
+    padding-left: 8px;
+}
+
+.articleAuthorOnPage{
+    font-size: 18px;
+    font-style: italic;
+    color: #aaa;
+    padding-bottom: 20px;
+}
+
+.articleDisplay{
+    padding: 20px 40px;
+}
+
+.articleBody{
+    text-align: justify;
+}
