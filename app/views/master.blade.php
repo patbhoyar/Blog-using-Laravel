@@ -10,7 +10,8 @@
     <div id="mainContainer">
         <div id="menuContainer">
             <ul id="menu">
-                <li class="menuItem">{{  HTML::link('/articles', "Home") }}</li>
+                <li class="menuItem">{{  HTML::link('/articles', "Articles") }}</li>
+                <li class="menuItem">{{  HTML::link('/author', "Authors") }}</li>
                 <li class="menuItem">{{  HTML::link('/article/create', "Add Article") }}</li>
                 <li class="menuItem">{{  HTML::link('/author/create', "Add Author") }}</li>
             </ul>
