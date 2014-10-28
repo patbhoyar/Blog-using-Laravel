@@ -15,7 +15,7 @@ $pageTitle  =   'All Articles';
             {{ HTML::link('author/'.$article['author_id'], $article['author']) }}
         </span>
         <span class="authorPics">
-            <a href="http://localhost:8888/projects/Blog/public/index.php/author/1">
+            <a href="http://localhost:8888/projects/Blog/public/index.php/author/{{$article['author_id']}}">
                 <img src="{{ $article['author_pic'] }}" alt=""/>
             </a>
         </span>
