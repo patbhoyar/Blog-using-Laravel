@@ -12,12 +12,14 @@ class ArticleController extends \BaseController {
         $allArticles = array();
         $articles = Article::all();
         foreach($articles as $article){
+            $pic = Util::getDataURI('images/'.$article->author->picPath);
             $art = array(
                 'title'         =>  $article->title,
                 'body'          =>  $article->body,
                 'author'        =>  $article->author->name,
                 'author_id'     =>  $article->author->id,
-                'article_id'    =>  $article->id
+                'article_id'    =>  $article->id,
+                'author_pic'    =>  $pic
             );
             array_push($allArticles, $art);
         }

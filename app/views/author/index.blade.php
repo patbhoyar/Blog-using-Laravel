@@ -2,19 +2,17 @@
 
 <?php
 
-$pageTitle = $authorName;
+$pageTitle = "All Authors";
 ?>
 
 @section('content')
 
-@foreach($articles as $article)
+@foreach($authors as $author)
 
 <div class="articleContainer">
     <div class="articleTitle">
-        {{  HTML::link('article/'.$article['id'], $article['title']) }}
+        {{  HTML::link('author/'.$author['id'], $author['name']) }}
     </div>
-
-    <div class="articleSyn">{{ Util::compacter($article['body']) }}</div>
 </div>
 
 @endforeach

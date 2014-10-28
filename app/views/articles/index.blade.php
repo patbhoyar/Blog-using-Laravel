@@ -14,6 +14,11 @@ $pageTitle  =   'All Articles';
         <span class="articleAuthor"> by
             {{ HTML::link('author/'.$article['author_id'], $article['author']) }}
         </span>
+        <span class="authorPics">
+            <a href="http://localhost:8888/projects/Blog/public/index.php/author/1">
+                <img src="{{ $article['author_pic'] }}" alt=""/>
+            </a>
+        </span>
     </div>
 
     <div class="articleSyn">{{ Util::compacter($article['body']) }}</div>

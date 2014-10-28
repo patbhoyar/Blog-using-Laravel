@@ -1,3 +1,4 @@
+<?php ob_start("ob_gzhandler"); ?>
 <!doctype html>
 <html>
 <head>
@@ -23,3 +24,4 @@
 
 </body>
 </html>
+<?php ob_end_flush(); ?>

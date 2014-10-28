@@ -10,6 +10,9 @@
         <div class="articleBody">
             {{ $article['body'] }}
         </div>
+        <div class="articleImage">
+            <img src="{{ Util::getDataURI('images/Sachin.jpg') }}" alt=""/>
+        </div>
     </div>
 
 

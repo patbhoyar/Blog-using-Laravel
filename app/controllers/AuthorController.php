@@ -9,7 +9,7 @@ class AuthorController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+        return View::make('author.index', array('authors' => Author::all()));
 	}
 
 	/**
@@ -19,7 +19,7 @@ class AuthorController extends \BaseController {
 	 */
 	public function create()
 	{
-        echo "Create Author";
+        return View::make('author.create');
 	}
 
 	/**
@@ -29,7 +29,10 @@ class AuthorController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$author = new Author();
+        $author->name = Input::get('newAuthorNameText');
+        $author->save();
+        return Redirect::to('/authors');
 	}
 
 	/**
@@ -42,7 +45,7 @@ class AuthorController extends \BaseController {
 	{
         $author = Author::find($id);
 		$articles = $author->articles;
-        return View::make('author.index', array('articles' => $articles, 'authorName' => $author->name, 'authorId' => $author->id));
+        return View::make('author.show', array('articles' => $articles, 'authorName' => $author->name, 'authorId' => $author->id));
 	}
 
 	/**
